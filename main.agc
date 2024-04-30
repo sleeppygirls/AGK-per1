@@ -37,19 +37,19 @@ do
 
 	if (GetSpriteX(1) < 0)
 		SetSpriteX(1, 0)
-		endif
+	endif
 		
 	if (GetSpriteX(1) > GetVirtualWidth() - GetSpriteWidth(1))
 		SetSpriteX(1, GetVirtualWidth() - GetSpriteWidth(1))
-		endif
+	endif
 		
 	if (GetSpriteY(1) < 0)
 		SetSpriteY(1,0)
 		endif
 		
-	if (GetSpriteX(1) > GetVirtualHeight() - GetSpriteHeight(1))
-		SetSpriteX(1, GetVirtualHeight() - GetSpriteHeight(1))
-		endif
+	if (GetSpriteY(1) > GetVirtualHeight() - GetSpriteHeight(1))
+		SetSpriteY(1, GetVirtualHeight() - GetSpriteHeight(1))
+	endif
 		
     Print( ScreenFPS() )
     Sync()
