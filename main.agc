@@ -16,14 +16,14 @@ SetScissor( 0,0,0,0 ) // use the maximum available screen space, no black border
 UseNewDefaultFonts( 1 ) // since version 2.0.22 we can use nicer default fonts
 
 
-LoadImage(1, "ubur.png") // load gambar di folder media (id image = 1)
+LoadImage(1, "makan.png") // load gambar di folder media (id image = 1)
 
 CreateSprite(1,1) // membuat sprite  dari gambar 1, id sprite = 1
 SetSpriteScale(1, 0.2, 0.2) // merubah ukuran sprite id = 1
 SetSpriteSize(1, 200, 200) // selain dengan scale jg dapat dengan syntax
 
 // Merubah posisi sprite supaya berada di tengah layar
-SetSpritePosition(1, (1024 / 2) - (GetSpriteWidth(1) / 2), (768 / 2) - (GetSpriteHeight(1) / 2))
+SetSpritePosition(1, (GetVirtualWidth() / 2) - (GetSpriteWidth(1) / 2), (GetVirtualHeight() / 2) - (GetSpriteHeight(1) / 2))
 
 // Membuat Joystick
 SetJoystickScreenPosition(200, 800, 20) 
@@ -45,7 +45,7 @@ do
 		
 	if (GetSpriteY(1) < 0)
 		SetSpriteY(1,0)
-		endif
+	endif
 		
 	if (GetSpriteY(1) > GetVirtualHeight() - GetSpriteHeight(1))
 		SetSpriteY(1, GetVirtualHeight() - GetSpriteHeight(1))
